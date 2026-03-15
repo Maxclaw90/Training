@@ -1,0 +1,55 @@
+.rep-counter {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.rep-counter.active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.rep-counter.pulse {
+  animation: rep-pulse 0.3s ease;
+}
+
+@keyframes rep-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.rep-label {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+}
+
+.rep-number {
+  font-size: var(--font-size-4xl);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+  margin: var(--spacing-xs) 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.rep-status {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .rep-number {
+    font-size: var(--font-size-3xl);
+  }
+}

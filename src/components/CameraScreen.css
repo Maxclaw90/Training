@@ -1,0 +1,218 @@
+.camera-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+}
+
+.camera-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-surface-elevated);
+}
+
+.back-button {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-elevated);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--font-size-xl);
+  transition: background 0.2s ease;
+}
+
+.back-button:hover {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.exercise-info-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.exercise-icon-small {
+  font-size: var(--font-size-xl);
+}
+
+.exercise-name-header {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.timer-display {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary);
+  background: var(--color-surface-elevated);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-md);
+}
+
+.camera-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-md);
+  gap: var(--spacing-md);
+}
+
+.camera-container {
+  position: relative;
+  flex: 1;
+  min-height: 300px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1); /* Mirror effect */
+}
+
+.pose-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.camera-error {
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.error-icon {
+  font-size: var(--font-size-3xl);
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+.camera-error p {
+  color: var(--color-text-muted);
+}
+
+.camera-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ready-prompt {
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.ready-icon {
+  font-size: var(--font-size-4xl);
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+.ready-prompt p {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.ready-sub {
+  font-size: var(--font-size-md) !important;
+  color: var(--color-text-muted);
+  margin-top: var(--spacing-xs);
+}
+
+.workout-panel {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: var(--spacing-md);
+  min-height: 140px;
+}
+
+.camera-footer {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-surface-elevated);
+}
+
+.start-stop-button {
+  width: 100%;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.start-stop-button.start {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.start-stop-button.start:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 255, 136, 0.3);
+}
+
+.start-stop-button.stop {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.start-stop-button.stop:hover {
+  background: #ff1a4d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 51, 102, 0.3);
+}
+
+.button-icon {
+  font-size: var(--font-size-lg);
+}
+
+@media (max-width: 480px) {
+  .camera-header {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .exercise-name-header {
+    font-size: var(--font-size-md);
+  }
+  
+  .timer-display {
+    font-size: var(--font-size-md);
+  }
+  
+  .workout-panel {
+    grid-template-columns: 100px 1fr;
+    min-height: 120px;
+  }
+  
+  .start-stop-button {
+    padding: var(--spacing-md);
+    font-size: var(--font-size-lg);
+  }
+}

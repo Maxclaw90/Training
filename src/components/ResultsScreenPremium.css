@@ -1,0 +1,230 @@
+/* Results Screen Premium Styles */
+
+.results-premium {
+  min-height: 100vh;
+  position: relative;
+  background: #0a0a0f;
+  overflow: hidden;
+}
+
+.results-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.results-orb {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 230, 115, 0.15) 0%, transparent 70%);
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.results-content {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Header */
+.results-header-premium {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid;
+  border-radius: 50px;
+}
+
+.rating-emoji {
+  font-size: 24px;
+}
+
+.rating-text {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Exercise Badge */
+.exercise-badge-premium {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px 32px;
+  background: linear-gradient(145deg, #1a1a25 0%, #12121a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.badge-icon-lg {
+  font-size: 40px;
+}
+
+.badge-name-lg {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Stats Grid */
+.stats-grid-premium {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* Quality Section */
+.quality-section {
+  background: linear-gradient(145deg, #1a1a25 0%, #12121a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6b6b7b;
+  margin-bottom: 20px;
+}
+
+.quality-bars-premium {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quality-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quality-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quality-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.quality-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.quality-dot.perfect {
+  background: #00e673;
+  box-shadow: 0 0 10px rgba(0, 230, 115, 0.5);
+}
+
+.quality-dot.good {
+  background: #00f0ff;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+.quality-dot.correction {
+  background: #ffb800;
+  box-shadow: 0 0 10px rgba(255, 184, 0, 0.5);
+}
+
+.quality-count {
+  font-size: 14px;
+  font-weight: 700;
+  color: #a0a0b0;
+}
+
+.quality-bar-bg {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.quality-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.quality-bar-fill.perfect {
+  background: linear-gradient(90deg, #00e673 0%, #00b359 100%);
+}
+
+.quality-bar-fill.good {
+  background: linear-gradient(90deg, #00f0ff 0%, #00b3cc 100%);
+}
+
+.quality-bar-fill.correction {
+  background: linear-gradient(90deg, #ffb800 0%, #cc9300 100%);
+}
+
+/* Motivation Card */
+.motivation-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, rgba(0, 230, 115, 0.1) 0%, rgba(0, 240, 255, 0.05) 100%);
+  border: 1px solid rgba(0, 230, 115, 0.2);
+  border-radius: 16px;
+}
+
+.motivation-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.motivation-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #a0a0b0;
+}
+
+/* Actions */
+.results-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding-top: 16px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .stats-grid-premium {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid-premium > *:first-child {
+    order: -1;
+  }
+  
+  .results-actions {
+    flex-direction: column;
+  }
+}
